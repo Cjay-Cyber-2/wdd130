@@ -1,15 +1,33 @@
+:root {
+    --blue: darkblue;
+    --white: white;
+    --gray-light: #eee;
+    --gray-dark: #333;
+    --black: black;
+
+    --pad-small: 10px;
+    --pad-medium: 15px;
+
+    --img-small: 150px;
+    --img-medium: 200px;
+
+    --shadow-dark: #333;
+    --shadow-light: gray;
+}
+
+/* NAVIGATION */
 nav {
-    background-color: darkblue;
-    padding: 10px;  
+    background-color: var(--blue);
+    padding: var(--pad-small);  
 }
 
 nav a {
-    display:block;
-    color: white;
     display: block;
-    padding: 15px;
+    color: var(--white);
+    padding: var(--pad-medium);
 }
 
+/* MAIN AREA */
 main {
     max-width: 800px;
 }
@@ -18,44 +36,51 @@ aside {
     width: 20rem;
     margin: 1rem;
     border: 1px solid rgb(0 0 0 / 0.2);
-    padding:1rem ;
-    background-color: #eee;
-    color: #333;
-    text-align:center ;
+    padding: 1rem;
+    background-color: var(--gray-light);
+    color: var(--gray-dark);
+    text-align: center;
 }
 
 aside img {
-    width: 200px;
+    width: var(--img-medium);
     height: auto;
 }
 
 main img {
-    width: 200px;
+    width: var(--img-medium);
     height: auto;
-    border: 1px solid #000;
-    padding:15px ;
-    box-shadow: 15px 15px 40px #333;
+    border: 1px solid var(--black);
+    padding: var(--pad-medium);
+    box-shadow: 15px 15px 40px var(--shadow-dark);
 }
 
-p {padding: 0;}
+/* TEXT */
+p {
+    padding: 0;
+}
 
 h1 {
-    color:darkblue;
+    color: var(--blue);
 }
 
+/* FOOTER */
 footer {
-    margin-top:15px ;
-    border-top:1px solid #000 ;
+    margin-top: 15px;
+    border-top: 1px solid var(--black);
     text-align: center;
 }
+
+/* GLOBAL IMG STYLE */
 img {
-    width: 150px;
+    width: var(--img-small);
     height: auto;
-    border: 1px solid black;
+    border: 1px solid var(--black);
     padding: 2px;
-    box-shadow: 0 0 30px gray;
+    box-shadow: 0 0 30px var(--shadow-light);
 }
 
+/* OVERRIDE PARAGRAPH */
 p {
-    padding: 10px;
+    padding: var(--pad-small);
 }
