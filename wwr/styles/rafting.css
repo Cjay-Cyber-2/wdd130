@@ -8,6 +8,7 @@
 }
 
 /* 2. RESET & GLOBAL STYLES */
+/* FIX: Universal Selector Reset moved to the top as required by the validator */
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +23,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
-  display: block; /* Prevents small gaps under images */
+  display: block;
 }
 
 /* 3. LAYOUT CONTAINERS */
@@ -34,7 +35,7 @@ header, main, footer {
 /* 4. HEADER & NAVIGATION */
 header {
   background-color: var(--accent1-color);
-  color: #ffffff;
+  color: white; /* FIX: Standardized color from #ffffff to white */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,13 +53,12 @@ nav ul {
 }
 
 nav a {
-  color: #ffffff;
+  color: white; /* FIX: Standardized color from #ffffff to white */
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
 }
 
-/* FIX: Using the previously unused variable here */
 nav a:hover {
   color: var(--accent2-color); 
 }
@@ -73,10 +73,18 @@ nav a:hover {
   top: 20px;
   width: 100%;
   text-align: center;
-  background-color: rgba(33, 70, 83, 0.7); /* Matching Accent1 RGB with opacity */
-  color: #ffffff;
+  background-color: rgba(33, 70, 83, 0.7);
+  color: white; /* FIX: Standardized color from #ffffff to white */
   padding: 15px;
   font-family: var(--heading-font);
+}
+
+.hero article h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
 }
 
 .hero article {
@@ -86,7 +94,7 @@ nav a:hover {
   width: 80%;
   max-width: 300px;
   background-color: rgba(33, 70, 83, 0.7);
-  color: #ffffff;
+  color: white; /* FIX: Standardized color from #ffffff to white */
   padding: 16px;
 }
 
@@ -108,24 +116,22 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* History Specifics */
 .history-content {
     line-height: 1.6;
 }
 
-/* Adventures Gallery Grid */
 .gallery {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 figure {
-    width: 18%; /* Fits 5 items horizontally */
+    width: 18%;
     min-width: 120px;
     margin: 0;
-    background-color: #ffffff;
+    background-color: white; /* FIX: Standardized color from #ffffff to white */
     padding: 5px;
     border: 1px solid #cccccc;
 }
@@ -140,7 +146,7 @@ figcaption {
 /* 7. FOOTER */
 footer {
     background-color: var(--accent1-color);
-    color: #ffffff;
+    color: white; /* FIX: Standardized color from #ffffff to white */
     padding: 25px 50px;
     margin-top: 20px;
     display: flex; 
