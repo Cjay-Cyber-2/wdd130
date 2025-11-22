@@ -8,7 +8,7 @@
 }
 
 /* 2. RESET & GLOBAL STYLES */
-/* FIX: Universal Selector Reset moved to the top as required by the validator */
+/* FIX: Ensures the reset is the absolute first rule after :root */
 * {
   margin: 0;
   padding: 0;
@@ -35,7 +35,7 @@ header, main, footer {
 /* 4. HEADER & NAVIGATION */
 header {
   background-color: var(--accent1-color);
-  color: white; /* FIX: Standardized color from #ffffff to white */
+  color: white; /* Standardized for color consistency */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,7 +53,7 @@ nav ul {
 }
 
 nav a {
-  color: white; /* FIX: Standardized color from #ffffff to white */
+  color: white; /* Standardized for color consistency */
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
@@ -73,8 +73,8 @@ nav a:hover {
   top: 20px;
   width: 100%;
   text-align: center;
-  background-color: rgba(33, 70, 83, 0.7);
-  color: white; /* FIX: Standardized color from #ffffff to white */
+  background-color: rgba(33, 70, 83, 0.7); /* Must remain rgba for transparency */
+  color: white; /* Standardized for color consistency */
   padding: 15px;
   font-family: var(--heading-font);
 }
@@ -94,7 +94,7 @@ nav a:hover {
   width: 80%;
   max-width: 300px;
   background-color: rgba(33, 70, 83, 0.7);
-  color: white; /* FIX: Standardized color from #ffffff to white */
+  color: white; /* Standardized for color consistency */
   padding: 16px;
 }
 
@@ -131,7 +131,7 @@ figure {
     width: 18%;
     min-width: 120px;
     margin: 0;
-    background-color: white; /* FIX: Standardized color from #ffffff to white */
+    background-color: white; /* Standardized for color consistency */
     padding: 5px;
     border: 1px solid #cccccc;
 }
@@ -146,7 +146,7 @@ figcaption {
 /* 7. FOOTER */
 footer {
     background-color: var(--accent1-color);
-    color: white; /* FIX: Standardized color from #ffffff to white */
+    color: white; /* Standardized for color consistency */
     padding: 25px 50px;
     margin-top: 20px;
     display: flex; 
