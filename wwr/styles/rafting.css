@@ -1,18 +1,18 @@
-/* 1. VARIABLES */
+/* 1. RESET & GLOBAL STYLES */
+/* FIX: Ensures the reset is the absolute first rule after :root */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2. VARIABLES */
 :root {
   --primary-color: #f4a262;   /* Orange */
   --accent1-color: #214653;   /* Dark Blue/Green */
   --accent2-color: #e9c46a;   /* Yellow */
   --heading-font: "Times New Roman", "Georgia", serif;
   --body-font: Arial, Helvetica, sans-serif;
-}
-
-/* 2. RESET & GLOBAL STYLES */
-/* FIX: Ensures the reset is the absolute first rule after :root */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
