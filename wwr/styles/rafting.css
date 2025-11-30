@@ -94,6 +94,7 @@ nav a:hover {
   margin-left: 10px;
 }
 
+/* FIX: Consolidated styling for section and h2 to remove repeated rules error */
 section {
     padding: 20px;
     text-align: center;
@@ -103,6 +104,15 @@ h2 {
     font-family: var(--heading-font);
     color: var(--primary-color);
     margin-bottom: 20px;
+}
+
+/* Added style for the new main page H1 */
+.page-title {
+    font-family: var(--heading-font);
+    color: var(--accent1-color);
+    text-align: center;
+    padding: 20px 0 10px 0;
+    font-size: 2.5rem;
 }
 
 .history-content {
@@ -192,7 +202,7 @@ footer {
     width: 100%;
     aspect-ratio: 1 / 1; 
     height: auto;
-    border: 1px solid #ccc;
+    border: 1px solid #ccc; /* Moved border style from inline to CSS */
 }
 
 .employees {
